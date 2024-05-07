@@ -24,8 +24,11 @@ To use this project:
    ```bash
    npm install
 2. Compile the contracts:
-   ```npx hardhat compile
+   ```bash
+   npx hardhat compile
 3. Run tests:
-    ```npx hardhat test
+    ```bash 
+    npx hardhat test
 4. Deploy the contract:
-    ```npx hardhat run scripts/deploy.js
+    ```bash 
+    npx hardhat run scripts/deploy.js
