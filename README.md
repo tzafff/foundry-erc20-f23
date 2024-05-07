@@ -1,66 +1,31 @@
-## Foundry
+# Foundry ChainTools - OurToken
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+## Introduction
 
-Foundry consists of:
+This repository contains a Solidity smart contract, deployment script, and test suite for the OurToken ERC20 token.
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## Contract
 
-## Documentation
+The `OurToken.sol` contract is an ERC20 token implementation that extends the OpenZeppelin ERC20 contract. It provides basic functionalities for managing tokens such as minting and transferring.
 
-https://book.getfoundry.sh/
+## Deploy Script
+
+The `DeployOurToken.sol` script is used to deploy the OurToken contract. It initializes the token with an initial supply specified by the constant `INITIAL_SUPPLY`.
+
+## Tests
+
+The test suite in `OurTokenTest.sol` covers various functionalities of the OurToken contract using the Forge Standard Library (forge-std). It includes tests for transferring tokens, approving allowances, and verifying balances.
 
 ## Usage
 
-### Build
+To use this project:
 
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+1. Install dependencies:
+   ```bash
+   npm install
+2. Compile the contracts:
+   ```npx hardhat compile
+3. Run tests:
+    ```npx hardhat test
+4. Deploy the contract:
+    ```npx hardhat run scripts/deploy.js
