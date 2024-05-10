@@ -16,19 +16,3 @@ The `DeployOurToken.sol` script is used to deploy the OurToken contract. It init
 
 The test suite in `OurTokenTest.sol` covers various functionalities of the OurToken contract using the Forge Standard Library (forge-std). It includes tests for transferring tokens, approving allowances, and verifying balances.
 
-## Usage
-
-To use this project:
-
-1. Install dependencies:
-   ```bash
-   npm install
-2. Compile the contracts:
-   ```bash
-   npx hardhat compile
-3. Run tests:
-    ```bash 
-    npx hardhat test
-4. Deploy the contract:
-    ```bash 
-    npx hardhat run scripts/deploy.js
